@@ -30,6 +30,13 @@ body {
 
 /* Css en mobile-first */
 
+.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 .header {
     padding: 20px;
     text-align: center;
@@ -79,6 +86,29 @@ header > h2 {
 .line {
     margin-top: 10px;
 }
+
+.triangle {
+    position: relative;
+    height: 10vh;
+}
+
+.triangle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 26px 26px 0 26px;
+    border-color: var(--color-primary) transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+}
+
+h3 {
+    margin-top: 2rem;
+}
+
 
 .circle {
     width: 60px;
