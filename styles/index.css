@@ -16,9 +16,9 @@
 
 body {
     font-family: 'Manrope', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--color-primary);
 }
-
-
 
 .attribution { 
     font-size: 11px; 
@@ -26,4 +26,91 @@ body {
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/* Css en mobile-first */
+
+.header {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+header > h2 {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 7rem;
+    background-color: var(--Dark-Grayish-Blue);
+}
+
+.content > h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    margin-bottom: 20px;
+    color: var(--color-secoundary);
+}
+
+.advice {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-left: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.line {
+    margin-top: 10px;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--color-secoundary);
+    position: relative;
+    bottom: -48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.circle:hover {
+    box-shadow: 0 0 30px var(--color-secoundary);
+}
+
+/* Media queries */
+
+
+@media screen and (min-width: 900px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        width: 40%;
+        margin-top: 5rem;
+        margin-bottom: 8rem;
+    }
 }
